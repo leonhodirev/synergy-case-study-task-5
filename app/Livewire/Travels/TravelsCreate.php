@@ -37,7 +37,7 @@ class TravelsCreate extends Component
         ]);
 
         foreach ($this->images as $image) {
-            $path = $image->store('public/travel_images');
+            $path = $image->store(getenv('FILESYSTEM_DISK') . '/travel_images');
             $travel->images()->create(['path' => $path]);
         }
 

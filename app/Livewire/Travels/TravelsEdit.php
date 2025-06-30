@@ -49,7 +49,7 @@ class TravelsEdit extends Component
         ]);
 
         foreach ($this->images as $image) {
-            $path = $image->store('public/travel_images');
+            $path = $image->store(getenv('FILESYSTEM_DISK') . '/travel_images');
             $this->travel->images()->create(['path' => $path]);
         }
 

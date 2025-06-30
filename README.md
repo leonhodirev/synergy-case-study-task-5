@@ -4,31 +4,24 @@
 
 **Команды:**
 ```bash
-# Проверка установки PHP и Composer
-php -v
-composer -V
-
 # Установка зависимостей
 composer install
 
+# Создание файла переменных окружения
+cp .env.example .env
 # Настройка подключения к базе данных в .env
-# Настройка подключения к базе данных в .env
-# DB_CONNECTION=pgsql
-# DB_HOST=localhost
-# DB_PORT=5432
-# DB_DATABASE=practike5
-# DB_USERNAME=postgres
-# DB_PASSWORD=postgres
 
 # Миграция базы данных
 php artisan migrate
 
-# Запуск локального сервера
-php artisan serve
+# Сгенерировать ключ приложения
+php artisan key:generate
 
-# Может потребоваться создать манифест
+# Сборка фронта
 npm install && npm run build
 
+# Запуск локального сервера
+php artisan serve
 ```
 Роуты
 -------------------

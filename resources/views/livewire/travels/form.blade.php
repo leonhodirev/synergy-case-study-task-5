@@ -22,7 +22,7 @@
                 <div id="map" style="width: 100%; height: 400px;"></div>
             </div>
 
-            <flux:input wire:model="cost" :label="__('Стоимость')" type="number" step="any"/>
+            <flux:input wire:model="cost" :label="__('Стоимость')" type="number" required step="any"/>
 
             <div>
                 <label class="block font-medium mb-2">{{ __('Изображения мест') }}</label>
